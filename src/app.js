@@ -1,11 +1,12 @@
-const express = require("express");
+const pool = require("./config/db");
 
-const app = express();
+async function testClients() {
+  try {
+    const [rows] = await pool.query("SELECT * FROM client;");
+    console.log(rows);
+  } catch (err) {
+    console.error(err);
+  }
+}
 
-app.get("/", (req, res) => {
-  res.send("Serveur fonctionne");
-});
-
-app.listen(3000, () => {
-  console.log("Serveur lancé sur le port 3000");
-});
+testClients();
