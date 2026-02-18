@@ -1,12 +1,11 @@
-const pool = require("./config/db");
+const express = require('express');
+const rdvRoutes = require('./modules/rdv/rdv.routes')
+const app = express();
 
-async function testClients() {
-  try {
-    const [rows] = await pool.query("SELECT * FROM client;");
-    console.log(rows);
-  } catch (err) {
-    console.error(err);
-  }
-}
+app.use(express.json())
+app.use('/', rdvRoutes);
 
-testClients();
+app.listen(3000, () => {
+  console.log('Serveur lancé');
+});
+
