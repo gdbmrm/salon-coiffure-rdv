@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Salon - RDV</title>
+  </head>
+  <body>
+    <h1>Connexion</h1>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input
+        type="password"
+        id="password"
+        placeholder="Mot de passe"
+        required
+      />
+      <button type="submit">Se connecter</button>
+    </form>
+
+    <h1>Prendre un RDV</h1>
+    <form id="rdvForm">
+      <input type="date" id="date_rdv" required />
+      <input type="time" id="heure_rdv" required />
+      <input type="text" id="prestation" placeholder="Prestation" required />
+      <select id="pro_id" required></select>
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <h2>Mes RDV</h2>
+    <table id="rdvTable" border="1">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Heure</th>
+          <th>Prestation</th>
+          <th>Pro</th>
+          <th>Statut</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <pre id="result"></pre>
+
+    <script src="script.js"></script>
+  </body>
+</html>
