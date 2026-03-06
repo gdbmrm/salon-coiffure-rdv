@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prise de rendez-vous</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo"></div>
+
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="prise-rdv.html">Prise de rendez-vous</a></li>
+        <li><a href="mes-rdv.html">Mes rendez-vous</a></li>
+      </ul>
+    </nav>
+
+    <h1>Prendre un RDV</h1>
+
+    <form id="rdvForm">
+      <input type="date" id="date_rdv" required />
+      <input type="time" id="heure_rdv" required />
+      <input type="text" id="prestation" placeholder="Prestation" required />
+      <select id="pro_id" required></select>
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <pre id="result"></pre>
+
+    <script src="script.js"></script>
+  </body>
+</html>
